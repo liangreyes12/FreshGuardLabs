@@ -2,86 +2,93 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title>FreshGuard Labs | Innovación en higiene personal</title>
-  <!-- Tailwind CSS + Font Awesome + Google Fonts + AOS -->
+  <!-- Tailwind CSS + Font Awesome + Google Fonts Amigables -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS + GSAP + Swiper -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="font-['Inter'] bg-[#F2F2F2] text-gray-800">
+<body class="font-['Nunito'] bg-[#F2F2F2] text-gray-800 overflow-x-hidden">
 
-  <!-- ==================== NAVBAR MODERNA ==================== -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <i class="fas fa-flask text-2xl" style="color: #4C7326;"></i>
-        <span class="font-bold text-xl tracking-tight" style="color: #21401D;">FreshGuard<span class="font-light" style="color: #594123;">Labs</span></span>
+        <span class="font-extrabold text-xl tracking-tight" style="color: #21401D;">FreshGuard<span class="font-light" style="color: #594123;">Labs</span></span>
       </div>
-      <div class="hidden md:flex space-x-8 font-medium">
+      <div class="hidden md:flex space-x-6 lg:space-x-8 font-semibold">
         <a href="#inicio" class="nav-link">Inicio</a>
         <a href="#nosotros" class="nav-link">Nosotros</a>
         <a href="#producto" class="nav-link">Producto</a>
         <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#portafolio" class="nav-link">Portafolio</a>
         <a href="#contacto" class="nav-link">Contacto</a>
       </div>
       <button id="menu-btn" class="md:hidden text-2xl focus:outline-none" style="color: #21401D;">
         <i class="fas fa-bars"></i>
       </button>
     </div>
-    <!-- Menú mobile -->
+    <!-- Menú mobile mejorado -->
     <div id="mobile-menu" class="md:hidden hidden bg-white border-t shadow-lg">
       <div class="flex flex-col items-center space-y-4 py-6">
         <a href="#inicio" class="nav-link-mobile">Inicio</a>
         <a href="#nosotros" class="nav-link-mobile">Nosotros</a>
         <a href="#producto" class="nav-link-mobile">Producto</a>
         <a href="#beneficios" class="nav-link-mobile">Beneficios</a>
+        <a href="#portafolio" class="nav-link-mobile">Portafolio</a>
         <a href="#contacto" class="nav-link-mobile">Contacto</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <!-- ==================== HERO con gradiente y CTA ==================== -->
-    <section id="inicio" class="pt-28 md:pt-36 pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #21401D 0%, #4C7326 100%);">
-      <div class="absolute inset-0 opacity-10">
-        <i class="fas fa-leaf absolute text-9xl -left-10 bottom-0"></i>
-        <i class="fas fa-shield-alt absolute text-8xl right-10 top-20"></i>
+    <!-- ==================== HERO con efecto de escritura ==================== -->
+    <section id="inicio" class="pt-28 md:pt-36 pb-16 md:pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #21401D 0%, #4C7326 100%);">
+      <div class="absolute inset-0 opacity-20">
+        <i class="fas fa-leaf floating-icon text-7xl md:text-9xl absolute -left-10 bottom-0"></i>
+        <i class="fas fa-shield-alt floating-icon text-6xl md:text-8xl absolute right-5 md:right-10 top-20"></i>
+        <i class="fas fa-droplet floating-icon text-5xl md:text-6xl absolute left-1/4 top-10"></i>
       </div>
-      <div class="container mx-auto px-6 text-white relative z-10">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="800">
-          <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">FreshGuard <span class="text-[#C5E0B4]">Labs</span></h1>
-          <p class="text-xl md:text-2xl italic mb-6">“Protección que viene de la Naturaleza”</p>
-          <p class="text-lg md:text-xl max-w-2xl mx-auto bg-black/20 backdrop-blur-sm p-6 rounded-2xl">
+      <div class="container mx-auto px-4 sm:px-6 text-white relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+            FreshGuard <span class="text-[#C5E0B4]">Labs</span>
+          </h1>
+          <p class="text-xl md:text-2xl italic mb-6 typing-text" id="typingText"></p>
+          <p class="text-base md:text-lg max-w-2xl mx-auto bg-black/20 backdrop-blur-sm p-5 md:p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
             Seis jóvenes emprendedores de Norte de Santander transformando la higiene personal con ciencia limpia y diseño emocional.
           </p>
-          <div class="mt-8 flex justify-center gap-4">
-            <a href="#producto" class="px-6 py-3 bg-white text-[#21401D] font-semibold rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105">Descubrir FreshGuard</a>
-            <a href="#contacto" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white/10 transition">Contáctanos</a>
+          <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+            <a href="#producto" class="px-6 py-3 bg-white text-[#21401D] font-bold rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105 text-center">Descubrir FreshGuard</a>
+            <a href="#contacto" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white/10 transition text-center">Contáctanos</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== INTRO + OBJETIVOS (cards modernas) ==================== -->
-    <section class="py-20 container mx-auto px-6">
+    <!-- ==================== OBJETIVOS ==================== -->
+    <section class="py-16 md:py-20 container mx-auto px-4 sm:px-6">
       <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold" style="color: #21401D;">Bienestar con propósito</h2>
-          <div class="w-24 h-1 bg-[#668C2B] mx-auto mt-4 rounded-full"></div>
+        <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-5xl font-extrabold" style="color: #21401D;">Bienestar con propósito</h2>
+          <div class="w-20 md:w-24 h-1 bg-[#668C2B] mx-auto mt-3 md:mt-4 rounded-full"></div>
         </div>
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition" data-aos="fade-right">
+        <div class="grid md:grid-cols-2 gap-6 md:gap-12">
+          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="fade-right" data-aos-duration="800">
             <i class="fas fa-bullseye text-4xl mb-4" style="color: #4C7326;"></i>
-            <h3 class="text-2xl font-bold mb-3" style="color: #594123;">Objetivo General</h3>
-            <p class="text-gray-600 leading-relaxed">Desarrollar, producir y comercializar productos innovadores de higiene personal que aporten bienestar, protección y confianza, posicionando a FreshGuard Labs como referente regional por calidad e innovación.</p>
+            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Objetivo General</h3>
+            <p class="text-gray-600 leading-relaxed text-sm md:text-base">Desarrollar, producir y comercializar productos innovadores de higiene personal que aporten bienestar, protección y confianza, posicionando a FreshGuard Labs como referente regional por calidad e innovación.</p>
           </div>
-          <div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition" data-aos="fade-left">
+          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="fade-left" data-aos-duration="800">
             <i class="fas fa-list-check text-4xl mb-4" style="color: #4C7326;"></i>
-            <h3 class="text-2xl font-bold mb-3" style="color: #594123;">Objetivos Específicos</h3>
-            <ul class="space-y-2 text-gray-600">
+            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Objetivos Específicos</h3>
+            <ul class="space-y-2 text-gray-600 text-sm md:text-base">
               <li><i class="fas fa-check-circle text-[#668C2B] mr-2"></i> Ingredientes seguros y efectivos</li>
               <li><i class="fas fa-check-circle text-[#668C2B] mr-2"></i> Hábitos de cuidado personal</li>
               <li><i class="fas fa-check-circle text-[#668C2B] mr-2"></i> Experiencias positivas de uso</li>
@@ -94,95 +101,130 @@
       </div>
     </section>
 
-    <!-- ==================== FRESHGUARD LABS + POLÍTICA ==================== -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="max-w-6xl mx-auto">
-          <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl font-bold" style="color: #21401D;">¿Qué es FreshGuard Labs?</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto mt-4">Empresa juvenil nortesantandereana, especializada en química limpia y diseño emocional. Cada fórmula nace de validación rigurosa y pruebas en pieles reales.</p>
+    <!-- ==================== FRESHGUARD LABS ==================== -->
+    <div class="relative">
+      <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-10 md:h-20 fill-white">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+      </div>
+      <section class="py-16 md:py-20 bg-white relative">
+        <div class="container mx-auto px-4 sm:px-6">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
+              <h2 class="text-3xl md:text-4xl font-extrabold" style="color: #21401D;">¿Qué es FreshGuard Labs?</h2>
+              <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-sm md:text-base">Empresa juvenil nortesantandereana, especializada en química limpia y diseño emocional. Cada fórmula nace de validación rigurosa y pruebas en pieles reales.</p>
+            </div>
+            <div class="bg-gradient-to-r from-[#21401D]/5 to-[#4C7326]/5 p-6 md:p-8 rounded-3xl border border-[#668C2B]/20" data-aos="zoom-in">
+              <h3 class="text-xl md:text-2xl font-bold text-center mb-5 md:mb-6" style="color: #594123;">Política Integral</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-shield-alt text-[#4C7326] text-xl"></i><span>Calidad y seguridad</span></div>
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-seedling text-[#4C7326] text-xl"></i><span>Prácticas responsables</span></div>
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-lightbulb text-[#4C7326] text-xl"></i><span>Innovación constante</span></div>
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-comments text-[#4C7326] text-xl"></i><span>Comunicación transparente</span></div>
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-chart-line text-[#4C7326] text-xl"></i><span>Mejoramiento continuo</span></div>
+                <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-heart text-[#4C7326] text-xl"></i><span>Bienestar del cliente</span></div>
+              </div>
+            </div>
           </div>
-          <div class="bg-gradient-to-r from-[#21401D]/5 to-[#4C7326]/5 p-8 rounded-3xl border border-[#668C2B]/20" data-aos="zoom-in">
-            <h3 class="text-2xl font-bold text-center mb-6" style="color: #594123;">Política Integral</h3>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              <div class="flex items-center gap-3"><i class="fas fa-shield-alt text-[#4C7326] text-xl"></i><span>Calidad y seguridad</span></div>
-              <div class="flex items-center gap-3"><i class="fas fa-seedling text-[#4C7326] text-xl"></i><span>Prácticas responsables</span></div>
-              <div class="flex items-center gap-3"><i class="fas fa-lightbulb text-[#4C7326] text-xl"></i><span>Innovación constante</span></div>
-              <div class="flex items-center gap-3"><i class="fas fa-comments text-[#4C7326] text-xl"></i><span>Comunicación transparente</span></div>
-              <div class="flex items-center gap-3"><i class="fas fa-chart-line text-[#4C7326] text-xl"></i><span>Mejoramiento continuo</span></div>
-              <div class="flex items-center gap-3"><i class="fas fa-heart text-[#4C7326] text-xl"></i><span>Bienestar del cliente</span></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== QUIÉNES SOMOS + HISTORIA ==================== -->
+    <section id="nosotros" class="py-16 md:py-20 container mx-auto px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="order-2 md:order-1 bg-white p-6 md:p-8 rounded-3xl shadow-xl" data-aos="fade-right">
+          <i class="fas fa-users text-5xl mb-4" style="color: #4C7326;"></i>
+          <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #21401D;">¿Quiénes somos?</h3>
+          <p class="text-gray-600 leading-relaxed text-sm md:text-base">Seis jóvenes emprendedores de Norte de Santander. No somos una multinacional, somos un proyecto local con ambición de crecimiento. Producimos soluciones de higiene desde la región para el mundo, con ingredientes seleccionados y control de calidad lote a lote.</p>
+        </div>
+        <div class="order-1 md:order-2" data-aos="fade-left">
+          <div class="bg-gradient-to-br from-[#4C7326] to-[#21401D] p-1 rounded-3xl shadow-2xl">
+            <div class="bg-white p-6 md:p-8 rounded-3xl">
+              <i class="fas fa-book-open text-5xl mb-4" style="color: #594123;"></i>
+              <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #594123;">Nuestra historia</h3>
+              <p class="text-gray-600 leading-relaxed text-sm md:text-base">Nacimos de la necesidad de ofrecer una alternativa real a los desodorantes que irritan o manchan. Tras investigar y formular, creamos FreshGuard: protección efectiva, frescura duradera y cuidado de la piel. Hoy iniciamos el camino para transformar la higiene personal en Colombia.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== QUIÉNES SOMOS + HISTORIA (dos columnas atractivas) ==================== -->
-    <section id="nosotros" class="py-20 container mx-auto px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="bg-white p-8 rounded-3xl shadow-xl" data-aos="fade-right">
-            <i class="fas fa-users text-5xl mb-4" style="color: #4C7326;"></i>
-            <h3 class="text-2xl font-bold mb-4" style="color: #21401D;">¿Quiénes somos?</h3>
-            <p class="text-gray-600 leading-relaxed">Seis jóvenes emprendedores de Norte de Santander. No somos una multinacional, somos un proyecto local con ambición de crecimiento. Producimos soluciones de higiene desde la región para el mundo, con ingredientes seleccionados y control de calidad lote a lote.</p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl shadow-xl" data-aos="fade-left">
-            <i class="fas fa-book-open text-5xl mb-4" style="color: #594123;"></i>
-            <h3 class="text-2xl font-bold mb-4" style="color: #594123;">Nuestra historia</h3>
-            <p class="text-gray-600 leading-relaxed">Nacimos de la necesidad de ofrecer una alternativa real a los desodorantes que irritan o manchan. Tras investigar y formular, creamos FreshGuard: protección efectiva, frescura duradera y cuidado de la piel. Hoy iniciamos el camino para transformar la higiene personal en Colombia.</p>
-          </div>
-        </div>
+    <!-- ==================== MISIÓN Y VISIÓN ==================== -->
+    <section class="py-16 md:py-20 bg-[#21401D]/5 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5">
+        <i class="fas fa-seedling text-8xl md:text-9xl absolute -bottom-10 -left-10"></i>
       </div>
-    </section>
-
-    <!-- ==================== MISIÓN Y VISIÓN (con fondo elegante) ==================== -->
-    <section class="py-20 bg-[#21401D]/5">
-      <div class="container mx-auto px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          <div class="bg-white p-8 rounded-3xl shadow-lg border-l-8 border-[#668C2B]" data-aos="flip-left">
+      <div class="container mx-auto px-4 sm:px-6 relative">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10">
+          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border-l-8 border-[#668C2B] transform transition hover:scale-105" data-aos="flip-left">
             <i class="fas fa-rocket text-4xl mb-3" style="color: #4C7326;"></i>
-            <h3 class="text-2xl font-bold mb-3" style="color: #21401D;">Misión</h3>
-            <p class="text-gray-600">Transformar ideas en soluciones de higiene personal de alto valor, investigando y desarrollando productos que brinden protección, frescura y bienestar, con ingredientes funcionales accesibles para toda la familia.</p>
+            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #21401D;">Misión</h3>
+            <p class="text-gray-600 text-sm md:text-base">Transformar ideas en soluciones de higiene personal de alto valor, investigando y desarrollando productos que brinden protección, frescura y bienestar, con ingredientes funcionales accesibles para toda la familia.</p>
           </div>
-          <div class="bg-white p-8 rounded-3xl shadow-lg border-l-8 border-[#594123]" data-aos="flip-right">
+          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-lg border-l-8 border-[#594123] transform transition hover:scale-105" data-aos="flip-right">
             <i class="fas fa-globe-americas text-4xl mb-3" style="color: #594123;"></i>
-            <h3 class="text-2xl font-bold mb-3" style="color: #594123;">Visión</h3>
-            <p class="text-gray-600">Ser una marca líder e innovadora en higiene personal en Colombia y Latinoamérica, demostrando que el talento de Norte de Santander puede competir globalmente con productos sostenibles, confiables y de alto impacto.</p>
+            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Visión</h3>
+            <p class="text-gray-600 text-sm md:text-base">Ser una marca líder e innovadora en higiene personal en Colombia y Latinoamérica, demostrando que el talento de Norte de Santander puede competir globalmente con productos sostenibles, confiables y de alto impacto.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== PRODUCTO: DESODORANTE FRESHGUARD ==================== -->
-    <section id="producto" class="py-20 container mx-auto px-6">
-      <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold" style="color: #21401D;">Desodorante FreshGuard</h2>
-        <div class="w-24 h-1 bg-[#668C2B] mx-auto my-4 rounded-full"></div>
-        <p class="text-gray-600 max-w-3xl mx-auto mb-12">Control del mal olor corporal + cuidado de la piel. Formulado con óxido de zinc, aceite de coco, vitamina E y aceites esenciales. Ideal para pieles sensibles.</p>
-        <div class="bg-gradient-to-br from-white to-[#F2F2F2] p-8 rounded-3xl shadow-2xl">
-          <h3 class="text-2xl font-bold mb-6" style="color: #594123;">Composición premium</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            <span class="px-5 py-2 bg-[#21401D] text-white rounded-full">Aceite de coco</span>
-            <span class="px-5 py-2 bg-[#4C7326] text-white rounded-full">Óxido de zinc (no nano)</span>
-            <span class="px-5 py-2 bg-[#668C2B] text-white rounded-full">Fécula de maíz</span>
-            <span class="px-5 py-2 bg-[#594123] text-white rounded-full">Aceites esenciales</span>
-            <span class="px-5 py-2 bg-[#21401D] text-white rounded-full">Vitamina E</span>
+    <!-- ==================== PRODUCTO + CARRUSEL DE FOTOS ==================== -->
+    <section id="producto" class="py-16 md:py-20 container mx-auto px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-5xl font-extrabold" style="color: #21401D;">Desodorante FreshGuard</h2>
+          <div class="w-20 md:w-24 h-1 bg-[#668C2B] mx-auto my-4 rounded-full"></div>
+          <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">Control del mal olor corporal + cuidado de la piel. Formulado con óxido de zinc, aceite de coco, vitamina E y aceites esenciales. Ideal para pieles sensibles.</p>
+        </div>
+
+        <!-- CARRUSEL SWIPER -->
+        <div class="swiper mySwiper mb-12 rounded-3xl shadow-2xl" data-aos="zoom-in">
+          <div class="swiper-wrapper">
+            <!-- Aquí van las imágenes del producto. Reemplaza las rutas por tus propias fotos -->
+            <div class="swiper-slide">
+              <img src="assets/img/Producto1.png" alt="FreshGuard producto 1" class="w-full h-64 md:h-96 object-cover rounded-3xl">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/Producto2.png" alt="FreshGuard producto 2" class="w-full h-64 md:h-96 object-cover rounded-3xl">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/Producto3.png" alt="FreshGuard producto 3" class="w-full h-64 md:h-96 object-cover rounded-3xl">
+            </div>
+            <!-- Agrega más slides según necesites -->
           </div>
-          <p class="mt-8 text-gray-500 text-sm">Textura sólida que se funde al contacto, absorción rápida, sin manchas y frescura prolongada.</p>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="bg-gradient-to-br from-white to-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-2xl transform transition hover:scale-[1.02]">
+          <h3 class="text-xl md:text-2xl font-bold mb-5 md:mb-6 text-center" style="color: #594123;">Composición premium</h3>
+          <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+            <span class="px-4 md:px-5 py-2 bg-[#21401D] text-white rounded-full text-sm md:text-base">Aceite de coco</span>
+            <span class="px-4 md:px-5 py-2 bg-[#4C7326] text-white rounded-full text-sm md:text-base">Óxido de zinc (no nano)</span>
+            <span class="px-4 md:px-5 py-2 bg-[#668C2B] text-white rounded-full text-sm md:text-base">Fécula de maíz</span>
+            <span class="px-4 md:px-5 py-2 bg-[#594123] text-white rounded-full text-sm md:text-base">Aceites esenciales</span>
+            <span class="px-4 md:px-5 py-2 bg-[#21401D] text-white rounded-full text-sm md:text-base">Vitamina E</span>
+          </div>
+          <p class="mt-6 md:mt-8 text-gray-500 text-xs md:text-sm text-center">Textura sólida que se funde al contacto, absorción rápida, sin manchas y frescura prolongada.</p>
         </div>
       </div>
     </section>
 
-    <!-- ==================== BENEFICIOS Y PRECAUCIONES (grid interactiva) ==================== -->
-    <section id="beneficios" class="py-20 bg-white">
-      <div class="container mx-auto px-6">
+    <!-- ==================== BENEFICIOS Y PRECAUCIONES ==================== -->
+    <section id="beneficios" class="py-16 md:py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12" style="color: #21401D;" data-aos="fade-up">Ventajas y cuidados</h2>
-          <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-[#F2F2F2] p-8 rounded-3xl shadow-md" data-aos="zoom-in-right">
-              <i class="fas fa-check-circle text-3xl mb-3" style="color: #4C7326;"></i>
-              <h3 class="text-2xl font-bold mb-4" style="color: #21401D;">Beneficios</h3>
-              <ul class="space-y-2 text-gray-700">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 md:mb-12" style="color: #21401D;" data-aos="fade-up">Ventajas y cuidados</h2>
+          <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+            <div class="bg-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-md hover:shadow-xl transition" data-aos="zoom-in-right">
+              <i class="fas fa-check-circle text-3xl mb-3 animate-pulse" style="color: #4C7326;"></i>
+              <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #21401D;">Beneficios</h3>
+              <ul class="space-y-2 text-gray-700 text-sm md:text-base">
                 <li><i class="fas fa-leaf text-[#4C7326] w-5"></i> Controla el mal olor 24h</li>
                 <li><i class="fas fa-leaf text-[#4C7326] w-5"></i> Piel seca y confortable</li>
                 <li><i class="fas fa-leaf text-[#4C7326] w-5"></i> Fórmula suave para piel sensible</li>
@@ -191,10 +233,10 @@
                 <li><i class="fas fa-leaf text-[#4C7326] w-5"></i> Textura no pegajosa</li>
               </ul>
             </div>
-            <div class="bg-[#F2F2F2] p-8 rounded-3xl shadow-md" data-aos="zoom-in-left">
-              <i class="fas fa-exclamation-triangle text-3xl mb-3" style="color: #594123;"></i>
-              <h3 class="text-2xl font-bold mb-4" style="color: #594123;">Contraindicaciones</h3>
-              <ul class="space-y-2 text-gray-700">
+            <div class="bg-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-md hover:shadow-xl transition" data-aos="zoom-in-left">
+              <i class="fas fa-exclamation-triangle text-3xl mb-3 animate-bounce" style="color: #594123;"></i>
+              <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #594123;">Contraindicaciones</h3>
+              <ul class="space-y-2 text-gray-700 text-sm md:text-base">
                 <li><i class="fas fa-ban text-[#594123] w-5"></i> Uso externo exclusivo</li>
                 <li><i class="fas fa-ban text-[#594123] w-5"></i> No aplicar sobre piel dañada</li>
                 <li><i class="fas fa-ban text-[#594123] w-5"></i> Suspender si hay irritación</li>
@@ -209,17 +251,17 @@
     </section>
 
     <!-- ==================== PROPUESTA DE VALOR + CLIENTE OBJETIVO ==================== -->
-    <section class="py-20 container mx-auto px-6">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        <div class="bg-gradient-to-br from-[#21401D] to-[#4C7326] text-white p-8 rounded-3xl shadow-xl" data-aos="flip-up">
-          <i class="fas fa-gem text-5xl mb-4"></i>
-          <h3 class="text-2xl font-bold mb-3">Propuesta de Valor</h3>
-          <p>Equilibrio entre protección, frescura y cuidado de la piel. Innovación, bienestar, calidad y confianza son nuestros pilares. No solo controlamos el olor, mejoramos tu experiencia diaria.</p>
+    <section class="py-16 md:py-20 container mx-auto px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12">
+        <div class="bg-gradient-to-br from-[#21401D] to-[#4C7326] text-white p-6 md:p-8 rounded-3xl shadow-xl transform transition hover:scale-105" data-aos="flip-up">
+          <i class="fas fa-gem text-4xl md:text-5xl mb-4"></i>
+          <h3 class="text-xl md:text-2xl font-bold mb-3">Propuesta de Valor</h3>
+          <p class="text-sm md:text-base">Equilibrio entre protección, frescura y cuidado de la piel. Innovación, bienestar, calidad y confianza son nuestros pilares. No solo controlamos el olor, mejoramos tu experiencia diaria.</p>
         </div>
-        <div class="bg-white p-8 rounded-3xl shadow-xl" data-aos="flip-down">
-          <i class="fas fa-users-viewfinder text-5xl mb-4" style="color: #4C7326;"></i>
-          <h3 class="text-2xl font-bold mb-3" style="color: #594123;">Cliente ideal</h3>
-          <ul class="grid grid-cols-1 gap-2 text-gray-600">
+        <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl" data-aos="flip-down">
+          <i class="fas fa-users-viewfinder text-4xl md:text-5xl mb-4" style="color: #4C7326;"></i>
+          <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Cliente ideal</h3>
+          <ul class="grid grid-cols-1 gap-2 text-gray-600 text-sm md:text-base">
             <li>✔ Hombres y mujeres de 16 a 55 años</li>
             <li>✔ Estilo de vida activo</li>
             <li>✔ Deportistas y profesionales</li>
@@ -230,28 +272,69 @@
       </div>
     </section>
 
-    <!-- ==================== CONTACTO Y CONCLUSIÓN (footer elegante) ==================== -->
-    <section id="contacto" class="py-20 relative" style="background: linear-gradient(120deg, #21401D, #4C7326);">
-      <div class="container mx-auto px-6 text-white text-center relative z-10">
+    <!-- ==================== PORTAFOLIO DESCARGABLE ==================== -->
+    <section id="portafolio" class="py-16 md:py-20 bg-gradient-to-r from-[#21401D]/10 to-[#4C7326]/10">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <div data-aos="zoom-in">
+            <i class="fas fa-file-pdf text-5xl md:text-6xl mb-4 text-red-600"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold mb-4" style="color: #21401D;">Portafolio Empresarial</h2>
+            <p class="text-gray-600 mb-6 text-sm md:text-base">Descarga nuestro portafolio completo con toda la información técnica, beneficios y proyecciones de FreshGuard Labs.</p>
+            <a href="assets/docs/Portafolio Empresarial.pdf" download class="inline-flex items-center gap-3 bg-[#21401D] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold shadow-lg hover:bg-[#4C7326] transition transform hover:scale-105 text-sm md:text-base">
+              <i class="fas fa-download"></i> Descargar Portafolio (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO MODERNO ==================== -->
+    <section id="contacto" class="py-16 md:py-20 relative" style="background: linear-gradient(120deg, #21401D, #4C7326);">
+      <div class="container mx-auto px-4 sm:px-6 text-white relative z-10">
         <div data-aos="fade-up">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">Conecta con nosotros</h2>
-          <div class="flex flex-wrap justify-center gap-6 mb-12">
-            <a href="mailto:freshguardlabs@gmail.com" class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-white/30 transition"><i class="fas fa-envelope"></i> freshguardlabs@gmail.com</a>
-            <a href="https://www.instagram.com/freshguardlabs?igsh=azVxY3o0MW9hMjhl" target="_blank" class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-white/30 transition"><i class="fab fa-instagram"></i> @freshguardlabs</a>
-            <a href="#" class="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full hover:bg-white/30 transition"><i class="fas fa-globe"></i> Web próximamente</a>
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-center">Conecta con nosotros</h2>
+          <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-12">
+            <!-- Contacto directo -->
+            <div class="space-y-4 md:space-y-6">
+              <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                <i class="fas fa-envelope text-xl md:text-2xl"></i>
+                <a href="mailto:freshguardlabs@gmail.com" class="hover:underline text-sm md:text-base break-all">freshguardlabs@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                <i class="fab fa-instagram text-xl md:text-2xl"></i>
+                <a href="https://www.instagram.com/freshguardlabs" target="_blank" class="hover:underline text-sm md:text-base">@freshguardlabs</a>
+              </div>
+              <div class="flex items-center gap-4 bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                <i class="fas fa-map-marker-alt text-xl md:text-2xl"></i>
+                <span class="text-sm md:text-base">Norte de Santander, Colombia</span>
+              </div>
+            </div>
+            <!-- Formulario simulado -->
+            <form action="#" method="post" class="space-y-4 bg-white/10 p-5 md:p-6 rounded-3xl backdrop-blur-md">
+              <h3 class="text-lg md:text-xl font-semibold">Escríbenos un mensaje</h3>
+              <input type="text" placeholder="Tu nombre" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
+              <input type="email" placeholder="Correo electrónico" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
+              <textarea rows="3" placeholder="Cuéntanos tu interés o duda" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"></textarea>
+              <button type="submit" class="bg-white text-[#21401D] font-bold py-3 px-6 rounded-xl w-full hover:bg-gray-100 transition transform hover:scale-105 text-sm md:text-base">Enviar consulta</button>
+              <p class="text-xs text-white/60 text-center">*Demo funcional, los mensajes se reciben por correo.</p>
+            </form>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-[#21401D] text-white py-8 text-center text-sm">
+  <footer class="bg-[#21401D] text-white py-6 md:py-8 text-center text-xs md:text-sm">
     <p>&copy; 2026 FreshGuard Labs - Norte de Santander, Colombia. <br> Hecho con <i class="fas fa-heart text-red-400"></i> por seis jóvenes emprendedores.</p>
   </footer>
 
-  <button id="backToTop" class="fixed bottom-5 right-5 bg-[#594123] text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[#4C7326] z-50"><i class="fas fa-arrow-up"></i></button>
+  <button id="backToTop" class="fixed bottom-5 right-5 bg-[#594123] text-white p-2 md:p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-[#4C7326] z-50"><i class="fas fa-arrow-up"></i></button>
 
+  <!-- Librerías -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

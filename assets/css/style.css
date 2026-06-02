@@ -1,27 +1,29 @@
 /* ===========================================
-   FreshGuard Labs - Estilos profesionales
-   Animaciones personalizadas y complementos
+   FreshGuard Labs - Estilos avanzados
+   Tipografía amigable, animaciones y responsividad
    =========================================== */
 
-/* Smooth scroll nativo */
 html {
   scroll-behavior: smooth;
 }
 
-/* Navbar transparente al inicio, luego sólido */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 #navbar {
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 #navbar.scrolled {
   background-color: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Enlaces de navegación */
 .nav-link {
   position: relative;
   color: #2d3e2a;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s;
 }
 .nav-link::after {
@@ -42,7 +44,7 @@ html {
 }
 .nav-link-mobile {
   color: #2d3e2a;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0.5rem 1rem;
   transition: background 0.2s;
 }
@@ -51,30 +53,114 @@ html {
   color: #4C7326;
 }
 
-/* Animaciones adicionales con AOS ya configuradas, pero forzamos fade-up en algunos */
-[data-aos] {
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.floating-icon {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
-/* Botón back to top */
 #backToTop.visible {
   opacity: 1 !important;
   visibility: visible !important;
 }
 
-/* Micro-interacción en cards */
 .bg-white, .rounded-3xl {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .bg-white:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 30px -12px rgba(0,0,0,0.15);
 }
 
-/* Responsive pequeños ajustes */
-@media (max-width: 768px) {
+/* Estilos base del carrusel */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper {
+  width: 100%;
+  border-radius: 1.5rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #4C7326;
+}
+.swiper-pagination-bullet-active {
+  background-color: #4C7326 !important;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  .rounded-3xl {
+    border-radius: 1.25rem;
+  }
+  .p-6 {
+    padding: 1rem;
+  }
+  .gap-6 {
+    gap: 1rem;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    max-height: 450px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
