@@ -170,4 +170,4 @@ const swiper = new Swiper('.mySwiper', {
   speed: 800,
 });
 
-console.log('FreshGuard Labs - Web con carrusel y animaciones GSAP');
+console.log('FreshGuard Labs - Web con carrusel corregido y animaciones GSAP');
