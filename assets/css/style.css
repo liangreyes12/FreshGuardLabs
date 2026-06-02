@@ -1,0 +1,80 @@
+/* ===========================================
+   FreshGuard Labs - Estilos profesionales
+   Animaciones personalizadas y complementos
+   =========================================== */
+
+/* Smooth scroll nativo */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar transparente al inicio, luego sólido */
+#navbar {
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+#navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Enlaces de navegación */
+.nav-link {
+  position: relative;
+  color: #2d3e2a;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #4C7326;
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: #4C7326;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link-mobile {
+  color: #2d3e2a;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+}
+.nav-link-mobile:hover {
+  background-color: #e9f5e6;
+  color: #4C7326;
+}
+
+/* Animaciones adicionales con AOS ya configuradas, pero forzamos fade-up en algunos */
+[data-aos] {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Botón back to top */
+#backToTop.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Micro-interacción en cards */
+.bg-white, .rounded-3xl {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.bg-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+}
+
+/* Responsive pequeños ajustes */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
