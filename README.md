@@ -106,7 +106,7 @@ Cada producto desarrollado por FreshGuard Labs representa nuestro compromiso con
 
 📸 **Instagram:** https://www.instagram.com/freshguardlabs
 
-🌐 **Sitio Web:** Próximamente
+🌐 **Sitio Web:** https://fresh-guard-labs.vercel.app/
 
 ---
 
