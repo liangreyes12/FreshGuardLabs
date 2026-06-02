@@ -5,15 +5,16 @@
 
 // Inicializar AOS
 AOS.init({
-  duration: 800,
-  once: true,
-  offset: 100,
-  easing: 'ease-out-quad'
+  duration: 900,
+  once: false,
+  offset: 80,
+  easing: 'ease-out-cubic',
+  anchorPlacement: 'top-bottom'
 });
 
 // ----- EFECTO DE ESCRITURA EN EL HERO -----
 const typingTextElement = document.getElementById('typingText');
-const phrases = ['“Protección que viene de la Naturaleza”', '“Ciencia limpia para tu piel”', '“Frescura que respira”'];
+const phrases = ['"Protección que viene de la Naturaleza"', '"Ciencia limpia para tu piel"', '"Frescura que respira"', '"Bienestar sin compromisos"'];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -30,7 +31,7 @@ function typeEffect() {
 
   if (!isDeleting && charIndex === currentPhrase.length) {
     isDeleting = true;
-    setTimeout(typeEffect, 2000);
+    setTimeout(typeEffect, 2500);
     return;
   }
   if (isDeleting && charIndex === 0) {
@@ -39,7 +40,7 @@ function typeEffect() {
     setTimeout(typeEffect, 500);
     return;
   }
-  const speed = isDeleting ? 50 : 100;
+  const speed = isDeleting ? 40 : 80;
   setTimeout(typeEffect, speed);
 }
 typeEffect();
@@ -56,9 +57,9 @@ gsap.utils.toArray('section').forEach((section) => {
       toggleActions: 'play none none reverse',
     },
     opacity: 0,
-    y: 50,
-    duration: 1,
-    ease: 'power3.out'
+    y: 60,
+    duration: 1.2,
+    ease: 'power4.out'
   });
 });
 
@@ -78,12 +79,12 @@ gsap.utils.toArray('h2').forEach((title) => {
 
 // Animación para los iconos flotantes (movimiento continuo)
 gsap.to('.floating-icon', {
-  y: 20,
-  duration: 3,
+  y: 25,
+  duration: 4,
   repeat: -1,
   yoyo: true,
   ease: 'sine.inOut',
-  stagger: 0.2
+  stagger: 0.3
 });
 
 // ----- Navbar scroll -----
@@ -151,23 +152,25 @@ window.addEventListener('resize', () => {
   }
 });
 
-// ----- Inicializar Swiper (carrusel de fotos) -----
+// ----- Inicializar Swiper (carrusel de fotos) MEJORADO -----
 const swiper = new Swiper('.mySwiper', {
   loop: true,
   autoplay: {
-    delay: 4000,
+    delay: 4500,
     disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
+    dynamicBullets: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   effect: 'slide',
-  speed: 800,
+  speed: 900,
+  grabCursor: true,
 });
 
-console.log('FreshGuard Labs - Web con carrusel corregido y animaciones GSAP');
+console.log('🌿 FreshGuard Labs - Web moderna con animaciones premium activadas');

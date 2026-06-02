@@ -49,24 +49,24 @@
 
   <main>
     <!-- ==================== HERO con efecto de escritura ==================== -->
-    <section id="inicio" class="pt-28 md:pt-36 pb-16 md:pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #21401D 0%, #4C7326 100%);">
-      <div class="absolute inset-0 opacity-20">
-        <i class="fas fa-leaf floating-icon text-7xl md:text-9xl absolute -left-10 bottom-0"></i>
-        <i class="fas fa-shield-alt floating-icon text-6xl md:text-8xl absolute right-5 md:right-10 top-20"></i>
-        <i class="fas fa-droplet floating-icon text-5xl md:text-6xl absolute left-1/4 top-10"></i>
+    <section id="inicio" class="pt-28 md:pt-36 pb-16 md:pb-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0d2818 0%, #1a3d23 25%, #2d5c35 50%, #4C7326 100%);">
+      <div class="absolute inset-0 opacity-30">
+        <i class="fas fa-leaf floating-icon text-7xl md:text-9xl absolute -left-10 bottom-0" style="opacity: 0.7;"></i>
+        <i class="fas fa-shield-alt floating-icon text-6xl md:text-8xl absolute right-5 md:right-10 top-20" style="opacity: 0.7;"></i>
+        <i class="fas fa-droplet floating-icon text-5xl md:text-6xl absolute left-1/4 top-10" style="opacity: 0.7;"></i>
       </div>
       <div class="container mx-auto px-4 sm:px-6 text-white relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
-            FreshGuard <span class="text-[#C5E0B4]">Labs</span>
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+            FreshGuard <span class="text-[#A8E6A1]" style="text-shadow: 0 4px 10px rgba(0,0,0,0.3);">Labs</span>
           </h1>
-          <p class="text-xl md:text-2xl italic mb-6 typing-text" id="typingText"></p>
-          <p class="text-base md:text-lg max-w-2xl mx-auto bg-black/20 backdrop-blur-sm p-5 md:p-6 rounded-2xl" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-xl md:text-2xl italic mb-6 typing-text font-bold" id="typingText" style="text-shadow: 0 2px 8px rgba(0,0,0,0.4);"></p>
+          <p class="text-base md:text-lg max-w-2xl mx-auto bg-white/15 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-white/20" data-aos="fade-up" data-aos-delay="200" style="box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
             Seis jóvenes emprendedores de Norte de Santander transformando la higiene personal con ciencia limpia y diseño emocional.
           </p>
           <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="#producto" class="px-6 py-3 bg-white text-[#21401D] font-bold rounded-full shadow-lg hover:shadow-xl transition transform hover:scale-105 text-center">Descubrir FreshGuard</a>
-            <a href="#contacto" class="px-6 py-3 border-2 border-white rounded-full hover:bg-white/10 transition text-center">Contáctanos</a>
+            <a href="#producto" class="px-8 py-3 md:py-4 bg-gradient-to-r from-white to-[#f0f0f0] text-[#21401D] font-bold rounded-full shadow-lg hover:shadow-2xl transition transform hover:scale-110 text-center hover:from-[#A8E6A1] hover:to-white" style="box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Descubrir FreshGuard</a>
+            <a href="#contacto" class="px-8 py-3 md:py-4 border-2 border-white rounded-full hover:bg-white/20 transition text-center transform hover:scale-110 font-semibold" style="box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Contáctanos</a>
           </div>
         </div>
       </div>
@@ -76,18 +76,22 @@
     <section class="py-16 md:py-20 container mx-auto px-4 sm:px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-          <h2 class="text-3xl md:text-5xl font-extrabold" style="color: #21401D;">Bienestar con propósito</h2>
-          <div class="w-20 md:w-24 h-1 bg-[#668C2B] mx-auto mt-3 md:mt-4 rounded-full"></div>
+          <h2 class="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[#21401D] to-[#4C7326] bg-clip-text text-transparent">Bienestar con propósito</h2>
+          <div class="w-24 md:w-28 h-1.5 bg-gradient-to-r from-[#4C7326] to-[#668C2B] mx-auto mt-4 md:mt-5 rounded-full" style="box-shadow: 0 4px 15px rgba(76, 115, 38, 0.3);"></div>
         </div>
         <div class="grid md:grid-cols-2 gap-6 md:gap-12">
-          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="fade-right" data-aos-duration="800">
-            <i class="fas fa-bullseye text-4xl mb-4" style="color: #4C7326;"></i>
-            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Objetivo General</h3>
+          <div class="bg-gradient-to-br from-white to-[#f8f8f8] p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 hover:border-[#4C7326] border-2 border-transparent" data-aos="fade-right" data-aos-duration="800" style="backdrop-filter: blur(10px);">
+            <div class="inline-block p-3 bg-gradient-to-br from-[#4C7326] to-[#21401D] rounded-2xl mb-4" style="box-shadow: 0 4px 15px rgba(76, 115, 38, 0.3);">
+              <i class="fas fa-bullseye text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#21401D] to-[#594123] bg-clip-text text-transparent">Objetivo General</h3>
             <p class="text-gray-600 leading-relaxed text-sm md:text-base">Desarrollar, producir y comercializar productos innovadores de higiene personal que aporten bienestar, protección y confianza, posicionando a FreshGuard Labs como referente regional por calidad e innovación.</p>
           </div>
-          <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2" data-aos="fade-left" data-aos-duration="800">
-            <i class="fas fa-list-check text-4xl mb-4" style="color: #4C7326;"></i>
-            <h3 class="text-xl md:text-2xl font-bold mb-3" style="color: #594123;">Objetivos Específicos</h3>
+          <div class="bg-gradient-to-br from-white to-[#f8f8f8] p-6 md:p-8 rounded-3xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 hover:border-[#4C7326] border-2 border-transparent" data-aos="fade-left" data-aos-duration="800" style="backdrop-filter: blur(10px);">
+            <div class="inline-block p-3 bg-gradient-to-br from-[#668C2B] to-[#4C7326] rounded-2xl mb-4" style="box-shadow: 0 4px 15px rgba(102, 140, 43, 0.3);">
+              <i class="fas fa-list-check text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold mb-3 bg-gradient-to-r from-[#21401D] to-[#594123] bg-clip-text text-transparent">Objetivos Específicos</h3>
             <ul class="space-y-2 text-gray-600 text-sm md:text-base">
               <li><i class="fas fa-check-circle text-[#668C2B] mr-2"></i> Ingredientes seguros y efectivos</li>
               <li><i class="fas fa-check-circle text-[#668C2B] mr-2"></i> Hábitos de cuidado personal</li>
@@ -111,12 +115,12 @@
       <section class="py-16 md:py-20 bg-white relative">
         <div class="container mx-auto px-4 sm:px-6">
           <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
-              <h2 class="text-3xl md:text-4xl font-extrabold" style="color: #21401D;">¿Qué es FreshGuard Labs?</h2>
-              <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-sm md:text-base">Empresa juvenil nortesantandereana, especializada en química limpia y diseño emocional. Cada fórmula nace de validación rigurosa y pruebas en pieles reales.</p>
-            </div>
-            <div class="bg-gradient-to-r from-[#21401D]/5 to-[#4C7326]/5 p-6 md:p-8 rounded-3xl border border-[#668C2B]/20" data-aos="zoom-in">
-              <h3 class="text-xl md:text-2xl font-bold text-center mb-5 md:mb-6" style="color: #594123;">Política Integral</h3>
+        <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-[#21401D] to-[#4C7326] bg-clip-text text-transparent">¿Qué es FreshGuard Labs?</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto mt-4 text-sm md:text-base">Empresa juvenil nortesantandereana, especializada en química limpia y diseño emocional. Cada fórmula nace de validación rigurosa y pruebas en pieles reales.</p>
+        </div>
+            <div class="bg-gradient-to-br from-[#21401D]/8 to-[#4C7326]/8 p-6 md:p-8 rounded-3xl border-2 border-[#668C2B]/30 hover:border-[#668C2B] transition" data-aos="zoom-in" style="backdrop-filter: blur(10px); box-shadow: 0 8px 32px rgba(0,0,0,0.06);">
+              <h3 class="text-xl md:text-2xl font-bold text-center mb-5 md:mb-6 bg-gradient-to-r from-[#21401D] to-[#594123] bg-clip-text text-transparent">Política Integral</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                 <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-shield-alt text-[#4C7326] text-xl"></i><span>Calidad y seguridad</span></div>
                 <div class="flex items-center gap-3 text-sm md:text-base"><i class="fas fa-seedling text-[#4C7326] text-xl"></i><span>Prácticas responsables</span></div>
@@ -177,7 +181,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-10 md:mb-12" data-aos="fade-up">
           <h2 class="text-3xl md:text-5xl font-extrabold" style="color: #21401D;">Desodorante FreshGuard</h2>
-          <div class="w-20 md:w-24 h-1 bg-[#668C2B] mx-auto my-4 rounded-full"></div>
+          <div class="w-24 md:w-28 h-1.5 bg-gradient-to-r from-[#4C7326] to-[#668C2B] mx-auto my-4 rounded-full" style="box-shadow: 0 4px 15px rgba(76, 115, 38, 0.3);"></div>
           <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base">Control del mal olor corporal + cuidado de la piel. Formulado con óxido de zinc, aceite de coco, vitamina E y aceites esenciales. Ideal para pieles sensibles.</p>
         </div>
 
@@ -199,8 +203,8 @@
           <div class="swiper-button-prev"></div>
         </div>
 
-        <div class="bg-gradient-to-br from-white to-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-2xl transform transition hover:scale-[1.02]">
-          <h3 class="text-xl md:text-2xl font-bold mb-5 md:mb-6 text-center" style="color: #594123;">Composición premium</h3>
+        <div class="bg-gradient-to-br from-white to-[#f8f8f8] p-6 md:p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition transform hover:scale-[1.02] border-2 border-[#4C7326]/10" style="backdrop-filter: blur(10px); box-shadow: 0 20px 50px rgba(0,0,0,0.08);">
+          <h3 class="text-xl md:text-2xl font-bold mb-5 md:mb-6 text-center bg-gradient-to-r from-[#21401D] to-[#594123] bg-clip-text text-transparent">Composición premium</h3>
           <div class="flex flex-wrap justify-center gap-3 md:gap-4">
             <span class="px-4 md:px-5 py-2 bg-[#21401D] text-white rounded-full text-sm md:text-base">Aceite de coco</span>
             <span class="px-4 md:px-5 py-2 bg-[#4C7326] text-white rounded-full text-sm md:text-base">Óxido de zinc (no nano)</span>
@@ -217,9 +221,9 @@
     <section id="beneficios" class="py-16 md:py-20 bg-white">
       <div class="container mx-auto px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 md:mb-12" style="color: #21401D;" data-aos="fade-up">Ventajas y cuidados</h2>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-10 md:mb-12 bg-gradient-to-r from-[#21401D] to-[#4C7326] bg-clip-text text-transparent" data-aos="fade-up">Ventajas y cuidados</h2>
           <div class="grid md:grid-cols-2 gap-6 md:gap-10">
-            <div class="bg-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-md hover:shadow-xl transition" data-aos="zoom-in-right">
+            <div class="bg-gradient-to-br from-white to-[#f8f8f8] p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition hover:-translate-y-1 border-2 border-[#4C7326]/20 hover:border-[#4C7326]" data-aos="zoom-in-right" style="backdrop-filter: blur(10px);">
               <i class="fas fa-check-circle text-3xl mb-3 animate-pulse" style="color: #4C7326;"></i>
               <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #21401D;">Beneficios</h3>
               <ul class="space-y-2 text-gray-700 text-sm md:text-base">
@@ -231,7 +235,7 @@
                 <li><i class="fas fa-leaf text-[#4C7326] w-5"></i> Textura no pegajosa</li>
               </ul>
             </div>
-            <div class="bg-[#F2F2F2] p-6 md:p-8 rounded-3xl shadow-md hover:shadow-xl transition" data-aos="zoom-in-left">
+            <div class="bg-gradient-to-br from-white to-[#f8f8f8] p-6 md:p-8 rounded-3xl shadow-lg hover:shadow-2xl transition hover:-translate-y-1 border-2 border-[#594123]/20 hover:border-[#594123]" data-aos="zoom-in-left" style="backdrop-filter: blur(10px);">
               <i class="fas fa-exclamation-triangle text-3xl mb-3 animate-bounce" style="color: #594123;"></i>
               <h3 class="text-xl md:text-2xl font-bold mb-4" style="color: #594123;">Contraindicaciones</h3>
               <ul class="space-y-2 text-gray-700 text-sm md:text-base">
@@ -276,10 +280,10 @@
         <div class="max-w-4xl mx-auto text-center">
           <div data-aos="zoom-in">
             <i class="fas fa-file-pdf text-5xl md:text-6xl mb-4 text-red-600"></i>
-            <h2 class="text-2xl md:text-4xl font-extrabold mb-4" style="color: #21401D;">Portafolio Empresarial</h2>
+            <h2 class="text-2xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-[#21401D] to-[#4C7326] bg-clip-text text-transparent">Portafolio Empresarial</h2>
             <p class="text-gray-600 mb-6 text-sm md:text-base">Descarga nuestro portafolio completo con toda la información técnica, beneficios y proyecciones de FreshGuard Labs.</p>
-            <a href="assets/docs/Portafolio Empresarial.pdf" download class="inline-flex items-center gap-3 bg-[#21401D] text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold shadow-lg hover:bg-[#4C7326] transition transform hover:scale-105 text-sm md:text-base">
-              <i class="fas fa-download"></i> Descargar Portafolio (PDF)
+            <a href="assets/docs/Portafolio Empresarial.pdf" download class="inline-flex items-center gap-3 bg-gradient-to-r from-[#21401D] to-[#4C7326] text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-lg hover:shadow-2xl transition transform hover:scale-110" style="box-shadow: 0 8px 25px rgba(76, 115, 38, 0.3);">
+              <i class="fas fa-download text-lg"></i> Descargar Portafolio (PDF)
             </a>
           </div>
         </div>
@@ -290,7 +294,7 @@
     <section id="contacto" class="py-16 md:py-20 relative" style="background: linear-gradient(120deg, #21401D, #4C7326);">
       <div class="container mx-auto px-4 sm:px-6 text-white relative z-10">
         <div data-aos="fade-up">
-          <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-center">Conecta con nosotros</h2>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-10 md:mb-12 bg-gradient-to-r from-[#21401D] to-[#4C7326] bg-clip-text text-transparent" data-aos="fade-up">Conecta con nosotros</h2>
           <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-10 mt-10 md:mt-12">
             <!-- Contacto directo -->
             <div class="space-y-4 md:space-y-6">
@@ -308,13 +312,14 @@
               </div>
             </div>
             <!-- Formulario simulado -->
-            <form action="#" method="post" class="space-y-4 bg-white/10 p-5 md:p-6 rounded-3xl backdrop-blur-md">
+            <form action="https://formsubmit.co/freshguardlabs@gmail.com" method="post" class="space-y-4 bg-white/15 p-5 md:p-6 rounded-3xl backdrop-blur-md border border-white/20">
               <h3 class="text-lg md:text-xl font-semibold">Escríbenos un mensaje</h3>
-              <input type="text" placeholder="Tu nombre" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
-              <input type="email" placeholder="Correo electrónico" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
-              <textarea rows="3" placeholder="Cuéntanos tu interés o duda" class="w-full p-3 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"></textarea>
-              <button type="submit" class="bg-white text-[#21401D] font-bold py-3 px-6 rounded-xl w-full hover:bg-gray-100 transition transform hover:scale-105 text-sm md:text-base">Enviar consulta</button>
-              <p class="text-xs text-white/60 text-center">*Demo funcional, los mensajes se reciben por correo.</p>
+              <input type="text" name="nombre" placeholder="Tu nombre completo" required class="w-full p-3 md:p-4 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-[#A8E6A1] text-sm md:text-base transition">
+              <input type="email" name="correo" placeholder="Tu correo electrónico" required class="w-full p-3 md:p-4 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-[#A8E6A1] text-sm md:text-base transition">
+              <textarea rows="4" name="mensaje" placeholder="Cuéntanos tu interés o duda..." required class="w-full p-3 md:p-4 rounded-xl bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-[#A8E6A1] text-sm md:text-base transition resize-none"></textarea>
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://yoursite.com/thanks.html">
+              <button type="submit" class="bg-gradient-to-r from-white to-[#f0f0f0] text-[#21401D] font-bold py-3 px-6 md:py-4 rounded-xl w-full hover:from-[#A8E6A1] hover:to-white transition transform hover:scale-105 text-sm md:text-base" style="box-shadow: 0 4px 15px rgba(255,255,255,0.2);">Enviar Mensaje</button>
             </form>
           </div>
         </div>
@@ -334,5 +339,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    // Manejador de formulario mejorado
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      });
+    });
+  </script>
 </body>
 </html>
